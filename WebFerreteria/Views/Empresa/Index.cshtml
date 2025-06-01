@@ -1,0 +1,53 @@
+﻿@model IEnumerable<WebFerreteria.Models.Empresa>
+
+@{
+    ViewData["Title"] = "Empresa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="usuarios-header">
+    <h4>Empresas Registradas</h4>
+    <a asp-action="Create" class="btn-large blue darken-2 waves-effect waves-light">
+        <i class="material-icons left">business</i> Crear Empresa
+    </a>
+</div>
+
+<div class="card usuarios-table-container">
+    <div class="card-content">
+        <table class="highlight responsive-table centered striped">
+            <thead class="blue-grey lighten-4">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Nombre)</th>
+                    <th>@Html.DisplayNameFor(model => model.Nit)</th>
+                    <th>@Html.DisplayNameFor(model => model.Direccion)</th>
+                    <th>@Html.DisplayNameFor(model => model.Telefono)</th>
+                    <th>@Html.DisplayNameFor(model => model.Correo)</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Nombre)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Nit)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Direccion)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Telefono)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Correo)</td>
+                        <td class="acciones-btns">
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn-small blue tooltipped" data-position="top" data-tooltip="Editar">
+                                <i class="material-icons">edit</i>
+                            </a>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn-small green tooltipped" data-position="top" data-tooltip="Detalles">
+                                <i class="material-icons">info</i>
+                            </a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn-small red tooltipped" data-position="top" data-tooltip="Eliminar" onclick="return confirm('¿Estás seguro de eliminar esta empresa?');">
+                                <i class="material-icons">delete</i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

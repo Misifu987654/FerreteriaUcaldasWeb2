@@ -1,0 +1,69 @@
+﻿@model WebFerreteria.Models.Entregas
+
+@{
+    ViewData["Title"] = "Crear Entrega";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h4 class="create-title">Registrar Entrega</h4>
+
+    <div class="card white create-card z-depth-2">
+        <div class="card-content">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="red-text text-darken-2"></div>
+
+                <!-- Pedido -->
+                <div class="input-field">
+                    <i class="material-icons prefix">receipt_long</i>
+                    <select asp-for="PedidoId" asp-items="ViewBag.PedidoId" id="PedidoId">
+                    <option value="">Seleccione el pedido</option>
+                    </select>
+                    <label>Pedido</label>
+                </div>
+
+                <!-- Entregado Por -->
+                <div class="input-field">
+                    <i class="material-icons prefix">person</i>
+                    <select asp-for="EntregadoPor" asp-items="ViewBag.EntregadoPor"> 
+                        <option value="">Seleccione el empleado</option>
+                    </select>
+                    <label>Entregado Por</label>
+                </div>
+
+                <!-- Dirección de Entrega -->
+                <div class="input-field">
+                    <i class="material-icons prefix">location_on</i>
+                    <input asp-for="DireccionEntrega" id="DireccionEntrega" class="validate" />
+                    <label asp-for="DireccionEntrega"></label>
+                    <span asp-validation-for="DireccionEntrega" class="helper-text red-text"></span>
+                </div>
+
+                <!-- Fecha de Entrega -->
+                <div class="input-field">
+                    <i class="material-icons prefix">event</i>
+                    <input asp-for="FechaEntrega" id="FechaEntrega" type="text" class="validate datepicker" />
+                    <label asp-for="FechaEntrega">Fecha de Entrega</label>
+                    <span asp-validation-for="FechaEntrega" class="helper-text red-text"></span>
+                </div>
+
+                <!-- Botones -->
+                <div class="row btn-group">
+                    <div class="col s12">
+                        <button type="submit" class="btn-large blue darken-2 waves-effect waves-light">
+                            <i class="material-icons left">save</i> Registrar
+                        </button>
+                        <a asp-action="Index" class="btn-large grey darken-1 waves-effect waves-light">
+                            <i class="material-icons left">arrow_back</i> Regresar
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+@{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

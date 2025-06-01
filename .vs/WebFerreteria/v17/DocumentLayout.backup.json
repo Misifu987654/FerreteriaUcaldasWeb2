@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|c:\\users\\koko7\\onedrive\\escritorio\\proyectoferreterialapuntilla\\webferreteria\\webferreteria\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|solutionrelative:webferreteria\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|c:\\users\\koko7\\onedrive\\escritorio\\proyectoferreterialapuntilla\\webferreteria\\webferreteria\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|solutionrelative:webferreteria\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|c:\\users\\koko7\\onedrive\\escritorio\\proyectoferreterialapuntilla\\webferreteria\\webferreteria\\wwwroot\\css\\theme_style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|solutionrelative:webferreteria\\wwwroot\\css\\theme_style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|c:\\users\\koko7\\onedrive\\escritorio\\proyectoferreterialapuntilla\\webferreteria\\webferreteria\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|solutionrelative:webferreteria\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|c:\\users\\koko7\\onedrive\\escritorio\\proyectoferreterialapuntilla\\webferreteria\\webferreteria\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|solutionrelative:webferreteria\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Views\\Clientes\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebFerreteria\\Views\\Clientes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Views\\Clientes\\Index.cshtml",
+              "RelativeToolTip": "WebFerreteria\\Views\\Clientes\\Index.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAACMAAABpAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-28T19:40:40.933Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "theme_style.css",
+              "DocumentMoniker": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\wwwroot\\css\\theme_style.css",
+              "RelativeDocumentMoniker": "WebFerreteria\\wwwroot\\css\\theme_style.css",
+              "ToolTip": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\wwwroot\\css\\theme_style.css",
+              "RelativeToolTip": "WebFerreteria\\wwwroot\\css\\theme_style.css",
+              "ViewState": "AgIAALUAAAAAAAAAAAAqwMEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-28T19:34:02.635Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "WebFerreteria\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "WebFerreteria\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-28T17:18:29.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebFerreteria\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WebFerreteria\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAD8AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-28T14:13:07.718Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "WebFerreteria\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "WebFerreteria\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-28T14:13:06.59Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{6324226f-61b6-4f28-92ee-18d4b5fe1e48}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

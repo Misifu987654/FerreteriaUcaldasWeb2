@@ -1,0 +1,52 @@
+﻿@model WebFerreteria.Models.DetallePedido
+
+@{
+    ViewData["Title"] = "Eliminar Detalle Pedido";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <br />
+    <h4 class="edit-title black-text text-darken-2">¿Estás seguro de eliminar este detalle de pedido?</h4>
+    <div class="card white z-depth-2">
+        <div class="card-content">
+            <ul class="collection with-header">
+
+                <li class="collection-header">
+                    <h5><i class="material-icons left">add_shopping_cart</i>Cantidad</h5>
+                </li>
+                <li class="collection-item">@Model.Cantidad</li>
+
+                <li class="collection-header">
+                    <h5><i class="material-icons left">attach_money</i>Precio Unitario</h5>
+                </li>
+                <li class="collection-item">@Model.PrecioUnitario</li>
+
+                <li class="collection-header">
+                    <h5><i class="material-icons left">assignment</i>Pedido</h5>
+                </li>
+                <li class="collection-item">@Model.Pedido.Id</li>
+
+                <li class="collection-header">
+                    <h5><i class="material-icons left">category</i>Producto</h5>
+                </li>
+                <li class="collection-item">@Model.Producto.Id</li>
+
+            </ul>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <div class="row btn-group">
+                    <div class="col s12">
+                        <button type="submit" class="btn-large blue tooltipped">
+                            <i class="material-icons left">delete</i> Eliminar
+                        </button>
+                        <a asp-action="Index" class="btn-large grey darken-1 waves-effect waves-light">
+                            <i class="material-icons left">arrow_back</i> Cancelar
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

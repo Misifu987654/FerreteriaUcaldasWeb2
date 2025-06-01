@@ -1,0 +1,71 @@
+﻿@model WebFerreteria.Models.DetallePedido
+
+@{
+    ViewData["Title"] = "Crear Detalle de Pedido";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h4 class="create-title">Crear Detalle de Pedido</h4>
+
+    <div class="card white create-card z-depth-2">
+        <div class="card-content">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="red-text text-darken-2"></div>
+
+                <!-- Pedido -->
+                <div class="input-field">
+                    <i class="material-icons prefix">assignment</i>
+                    <select asp-for="PedidoId" asp-items="ViewBag.PedidoId" id="PedidoId">
+                        <option value="">Seleccione el pedido</option>
+                    </select>
+                    <label for="PedidoId">Pedido</label>
+                </div>
+
+                <!-- Producto -->
+                <div class="input-field col s12">
+                    <i class="material-icons prefix">inventory_2</i>
+                    <select asp-for="ProductoId" asp-items="@(ViewBag.ProductoId as SelectList)">
+                        <option value="" disabled selected>Seleccione un producto</option>
+                    </select>
+                    <label for="ProductoId">Producto</label>
+                </div>
+
+
+                <!-- Cantidad -->
+                <div class="input-field">
+                    <i class="material-icons prefix">numbers</i>
+                    <input asp-for="Cantidad" id="Cantidad" class="validate" />
+                    <label asp-for="Cantidad"></label>
+                    <span asp-validation-for="Cantidad" class="helper-text red-text"></span>
+                </div>
+
+                <!-- Precio Unitario -->
+                <div class="input-field">
+                    <i class="material-icons prefix">attach_money</i>
+                    <input asp-for="PrecioUnitario" id="PrecioUnitario" class="validate" />
+                    <label asp-for="PrecioUnitario"></label>
+                    <span asp-validation-for="PrecioUnitario" class="helper-text red-text"></span>
+                </div>
+
+                <!-- Botones -->
+                <div class="row btn-group">
+                    <div class="col s12">
+                        <button type="submit" class="btn-large blue darken-2 waves-effect waves-light">
+                            <i class="material-icons left">save</i> Crear
+                        </button>
+                        <a asp-action="Index" class="btn-large grey darken-1 waves-effect waves-light">
+                            <i class="material-icons left">arrow_back</i> Regresar
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

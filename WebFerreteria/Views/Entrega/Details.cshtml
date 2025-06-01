@@ -1,0 +1,44 @@
+﻿@model WebFerreteria.Models.Entregas
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h4 class="details-title">
+        <i class="material-icons left"></i> Detalles de la Entrega
+    </h4>
+
+    <div class="card details-card white z-depth-2">
+        <div class="card-content">
+            <dl class="row details-list">
+                <div class="col s12 m6">
+                    <dt><i class="material-icons tiny">place</i> @Html.DisplayNameFor(model => model.DireccionEntrega)</dt>
+                    <dd>@Html.DisplayFor(model => model.DireccionEntrega)</dd>
+
+                    <dt><i class="material-icons tiny">event</i> @Html.DisplayNameFor(model => model.FechaEntrega)</dt>
+                    <dd>@Html.DisplayFor(model => model.FechaEntrega)</dd>
+                </div>
+                <div class="col s12 m6">
+                    <dt><i class="material-icons tiny">person</i> @Html.DisplayNameFor(model => model.EntregadoPorNavigation)</dt>
+                    <dd>@Html.DisplayFor(model => model.EntregadoPorNavigation.Id)</dd>
+
+                    <dt><i class="material-icons tiny">assignment</i> @Html.DisplayNameFor(model => model.Pedido)</dt>
+                    <dd>@Html.DisplayFor(model => model.Pedido.Id)</dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+
+    <div class="row btn-group">
+        <div class="col s12">
+            <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn-large blue darken-2 waves-effect waves-light">
+                <i class="material-icons left">edit</i> Editar
+            </a>
+            <a asp-action="Index" class="btn-large grey darken-1 waves-effect waves-light">
+                <i class="material-icons left">arrow_back</i> Regresar
+            </a>
+        </div>
+    </div>
+</div>

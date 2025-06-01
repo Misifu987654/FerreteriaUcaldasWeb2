@@ -1,0 +1,69 @@
+﻿@model WebFerreteria.Models.Productos
+
+@{
+    ViewData["Title"] = "Editar Producto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <br />
+    <h4 class="edit-title">Editar Producto</h4>
+    <div class="card white edit-card z-depth-2">
+        <div class="card-content">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="red-text text-darken-2"></div>
+                <input type="hidden" asp-for="Id" />
+
+                <!-- Nombre -->
+                <div class="input-field">
+                    <i class="material-icons prefix">inventory_2</i>
+                    <input asp-for="Nombre" id="Nombre" type="text" class="validate" />
+                    <label asp-for="Nombre"></label>
+                    <span asp-validation-for="Nombre" class="helper-text red-text"></span>
+                </div>
+
+                <!-- Descripción -->
+                <div class="input-field">
+                    <i class="material-icons prefix">description</i>
+                    <input asp-for="Descripcion" id="Descripcion" type="text" class="validate" />
+                    <label asp-for="Descripcion"></label>
+                    <span asp-validation-for="Descripcion" class="helper-text red-text"></span>
+                </div>
+
+                <!-- Precio -->
+                <div class="input-field">
+                    <i class="material-icons prefix">attach_money</i>
+                    <input asp-for="Precio" id="Precio" type="number" step="0.01" class="validate" />
+                    <label asp-for="Precio"></label>
+                    <span asp-validation-for="Precio" class="helper-text red-text"></span>
+                </div>
+
+                <!-- Cantidad -->
+                <div class="input-field">
+                    <i class="material-icons prefix">format_list_numbered</i>
+                    <input asp-for="Cantidad" id="Cantidad" type="number" class="validate" />
+                    <label asp-for="Cantidad"></label>
+                    <span asp-validation-for="Cantidad" class="helper-text red-text"></span>
+                </div>
+
+                <!-- Botones -->
+                <div class="row btn-group">
+                    <div class="col s12">
+                        <button type="submit" class="btn-large blue darken-2 waves-effect waves-light">
+                            <i class="material-icons left">save</i> Guardar
+                        </button>
+                        <a asp-action="Index" class="btn-large grey darken-1 waves-effect waves-light">
+                            <i class="material-icons left">arrow_back</i> Regresar
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

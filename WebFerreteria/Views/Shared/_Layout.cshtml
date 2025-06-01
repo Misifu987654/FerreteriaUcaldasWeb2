@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - La Puntilla</title>
+
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="~/materialize/css/materialize.min.css" />
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="~/css/theme_style.css" asp-append-version="true" />
+</head>
+
+<body>
+    <header>
+        <ul id="slide-out" class="sidenav sidenav-fixed grey lighten-4">
+            <li><a class="brand-logo center blue-text text-darken-3" style="padding: 10px;">La Puntilla</a></li>
+            <li><a asp-controller="Home" asp-action="Index"><i class="material-icons">home</i>Home</a></li>
+            <li><a asp-controller="Home" asp-action="Privacy"><i class="material-icons">security</i>Privacidad</a></li>
+            <li><a asp-controller="Usuario" asp-action="Index"><i class="material-icons">person</i>Usuarios</a></li>
+            <li><a asp-controller="Clientes" asp-action="Index"><i class="material-icons">group</i>Clientes</a></li>
+            <li><a asp-controller="Empresa" asp-action="Index"><i class="material-icons">business</i>Empresa</a></li>
+            <li><a asp-controller="Entrega" asp-action="Index"><i class="material-icons">local_shipping</i>Entrega</a></li>
+            <li><a asp-controller="Producto" asp-action="Index"><i class="material-icons">shopping_cart</i>Producto</a></li>
+            <li><a asp-controller="Pedido" asp-action="Index"><i class="material-icons">assignment</i>Pedido</a></li>
+            <li><a asp-controller="DetallePedido" asp-action="Index"><i class="material-icons">list</i>Detalle Pedido</a></li>
+            <li><a asp-controller="Factura" asp-action="Index"><i class="material-icons">receipt</i>Factura</a></li>
+        </ul>
+
+        <nav class="blue darken-2">
+            <div class="nav-wrapper">
+                <a href="#" data-target="slide-out" class="sidenav-trigger left show-on-large"><i class="material-icons">menu</i></a>
+                <ul class="right">
+                    <li>
+                        <a href="#" id="themeToggle">
+                            <i class="material-icons">brightness_6</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container" style="margin-left: 300px;">
+        @RenderBody()
+    </main>
+
+    <footer class="page-footer grey lighten-4" style="margin-left: 300px;">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <p class="grey-text text-darken-1">
+                        &copy; @DateTime.Now.Year - WebFerreteria -
+                        <a asp-controller="Home" asp-action="Privacy">Privacidad</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="~/materialize/js/materialize.min.js"></script>
+    <script src="~/js/mis_scripts.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            M.AutoInit();
+
+            const toggle = document.getElementById('themeToggle');
+            const htmlEl = document.documentElement;
+
+            // Cargar tema desde localStorage
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) htmlEl.setAttribute('data-theme', savedTheme);
+
+            toggle.addEventListener('click', function () {
+                let current = htmlEl.getAttribute('data-theme');
+                let next = current === 'dark' ? 'light' : 'dark';
+                htmlEl.setAttribute('data-theme', next);
+                localStorage.setItem('theme', next);
+            });
+        });
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

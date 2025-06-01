@@ -1,0 +1,137 @@
+﻿@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .dashboard-card {
+        background: #f5f5f5;
+        padding: 20px;
+        margin: 10px 0;
+        border-radius: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+        .dashboard-card h5 {
+            margin-bottom: 10px;
+        }
+
+    .action-buttons .btn {
+        margin: 0 10px;
+    }
+
+    .action-buttons .btn{
+
+    
+        margin: 5px 0;
+        display: block;
+    }
+
+    .action-buttons .btn.blue.darken-2, .action-buttons .btn.blue.darken-2 i {
+    color: white !important;
+    }
+
+    /*Nuevas Funciones Inicio*/
+
+    :root {
+        --bg-color: white;
+        --text-color: black;
+    }
+
+    [data-theme="dark"] {
+        --bg-color: #121212;
+        --text-color: #f0f0f0;
+    }
+
+    body {
+        background-color: var(--bg-color);
+        color: var(--text-color);
+    }
+
+    nav, footer {
+        background-color: var(--bg-color) !important;
+        color: var(--text-color) !important;
+    }
+
+    .sidenav {
+        background-color: var(--bg-color) !important;
+    }
+
+    a, .material-icons {
+        color: var(--text-color) !important;
+    }
+
+    .btn-text-white {
+        color: white !important;
+    }
+
+</style>
+
+<div class="container">
+    <!-- Encabezado con información operativa -->
+    <div class="section center-align dashboard-card">
+        <h4>Panel de Control - Ferretería La Puntilla</h4>
+        <p>Última actualización: @DateTime.Now.ToString("dd/MM/yyyy HH:mm") | Total de productos: <strong>150</strong> | Alertas de stock bajo: <strong>5</strong></p>
+    </div>
+
+    <!-- Resumen de inventario (reemplazo del carrusel) -->
+    <div class="section dashboard-card">
+        <h5>Resumen de Inventario</h5>
+        <table class="striped responsive-table centered">
+            <thead>
+                <tr>
+                    <th>Producto</th>
+                    <th>Stock</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Martillo</td>
+                    <td>20</td>
+                    <td><span class="red-text">Bajo</span></td>
+                </tr>
+                <tr>
+                    <td>Clavo 2"</td>
+                    <td>100</td>
+                    <td>Normal</td>
+                </tr>
+                <tr>
+                    <td>Pintura Blanca</td>
+                    <td>5</td>
+                    <td><span class="red-text">Bajo</span></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="center-align"><a href="@Url.Action("Index", "Productos")" class="btn blue btn-text-white">Ver todos los productos</a></p>
+    </div>
+
+    <!-- Acciones rápidas -->
+    <div class="section center-align dashboard-card">
+        <h5>Acciones Rápidas</h5>
+        <div class="action-buttons">
+            <a href="@Url.Action("Index", "Productos")" class="btn blue darken-2">
+                <i class="material-icons left">inventory</i> Gestionar Productos
+            </a>
+            <a href="@Url.Action("Index", "Pedidos")" class="btn blue darken-2">
+                <i class="material-icons left">shopping_cart</i> Gestionar Pedidos
+            </a>
+            <a href="@Url.Action("Index", "Entregas")" class="btn blue darken-2">
+                <i class="material-icons left">local_shipping</i> Gestionar Entregas
+            </a>
+        </div>
+    </div>
+
+    <!-- Información operativa -->
+    <div class="section center-align dashboard-card">
+        <h6>Estado del Sistema</h6>
+        <p>Última sincronización: @DateTime.Now.AddHours(-1).ToString("dd/MM/yyyy HH:mm")</p>
+        <p><a href="@Url.Action("Index", "Reportes")" class="btn blue btn-text-white">Generar Reporte</a></p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        
+    });
+</script>

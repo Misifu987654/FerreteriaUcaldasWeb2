@@ -1,0 +1,119 @@
+﻿@{
+    ViewData["Title"] = "Políticas Empresariales";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!-- Estilo personalizado para la página -->
+<style>
+    /* Estilo para la sección principal que contiene toda la página de políticas */
+    .policy-section {
+        background-color: #f5f5f5; /* Fondo gris claro para un contraste suave con las tarjetas */
+/*         min-height: 100vh; /* Asegura que la sección ocupe al menos el 100% de la altura de la ventana del navegador */
+ */        padding: 40px 0; /* Agrega un relleno de 40px en la parte superior e inferior para espaciar el contenido */
+    }
+    /* Estilo para las tarjetas que contienen cada sección de la política */
+    .policy-card {
+        padding: 20px; /* Agrega un relleno interno de 20px en todos los lados para que el contenido no esté pegado a los bordes */
+        border-radius: 8px; /* Redondea las esquinas de la tarjeta con un radio de 8px para un diseño más moderno */
+    }
+    /* Estilo para los títulos de las secciones (como "¿Quiénes somos?", "Recopilación de datos", etc.) */
+    .section-title {
+        color: #0277bd; /* Color azul */
+        font-weight: bold; /* texto en negrilla */
+        margin-bottom: 20px; /* Agrega un margen inferior de 20px para separar el título del contenido siguiente */
+    }
+    /* Estilo para los ítems de las listas no ordenadas (<ul><li>) */
+
+    /* Estilo para los enlaces de contacto (como el email "privacidad@lapuntilla.com") */
+    .contact-link {
+        color: #0277bd; /* Color azul que coincide con el tema del sitio */
+        text-decoration: underline; /* Subraya el enlace para que sea reconocible como enlace */
+    }
+        /* Estilo para el enlace de contacto cuando el usuario pasa el mouse por encima */
+        .contact-link:hover {
+            color: #01579b; /* Cambia el color a un azul más oscuro para dar retroalimentación visual al interactuar */
+        }
+    /* Estilo para el texto de la última actualización */
+    .last-updated {
+        font-style: italic; /* Hace que el texto sea cursiva para darle un aspecto más discreto y elegante */
+        color: #666; /* Color gris oscuro para que no sea tan prominente como el contenido principal */
+    }
+
+
+</style>
+
+<!-- Contenido de la página -->
+<div class="policy-section">
+    <div class="container">
+        <h2 class="center-align section-title">Política de Privacidad</h2>
+
+        <div class="card policy-card">
+            <div class="card-content">
+                <p>En <strong>La Puntilla Ferretería</strong>, valoramos y respetamos la privacidad de nuestros clientes y visitantes. Esta política describe cómo recopilamos, utilizamos y protegemos la información personal que usted nos proporciona a través de nuestro sitio web.</p>
+            </div>
+        </div>
+
+        <div class="card policy-card">
+            <div class="card-content">
+                <h4 class="section-title">¿Quiénes somos?</h4>
+                <p>La Puntilla es una ferretería ubicada en Manizales, Colombia, especializada en la venta de herramientas, materiales de construcción y productos para el hogar. Nuestro objetivo es brindar un servicio rápido, confiable y personalizado, tanto en tienda física como a través de nuestra plataforma web.</p>
+            </div>
+        </div>
+
+        <div class="card policy-card">
+            <div class="card-content">
+                <h4 class="section-title">Recopilación de datos</h4>
+                <p>Recopilamos información personal cuando usted:</p>
+                <ul class="collection">
+                    <li class="collection-item"><i class="material-icons left">check</i>Se registra en nuestro sitio web</li>
+                    <li class="collection-item"><i class="material-icons left">check</i>Realiza una compra</li>
+                    <li class="collection-item"><i class="material-icons left">check</i>Solicita información o soporte</li>
+                </ul>
+                <p>La información recopilada puede incluir: nombre, dirección, correo electrónico, número de teléfono y detalles de facturación.</p>
+            </div>
+        </div>
+
+        <div class="card policy-card">
+            <div class="card-content">
+                <h4 class="section-title">Uso de la información</h4>
+                <p>Utilizamos sus datos para los siguientes fines:</p>
+                <ul class="collection">
+                    <li class="collection-item"><i class="material-icons left">check</i>Procesar pedidos y entregas</li>
+                    <li class="collection-item"><i class="material-icons left">check</i>Gestionar su cuenta de usuario</li>
+                    <li class="collection-item"><i class="material-icons left">check</i>Brindar soporte técnico y atención al cliente</li>
+                    <li class="collection-item"><i class="material-icons left">check</i>Mejorar nuestros productos y servicios</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card policy-card">
+            <div class="card-content">
+                <h4 class="section-title">Protección de datos</h4>
+                <p>La Puntilla implementa medidas técnicas y organizativas para proteger su información personal contra pérdida, acceso no autorizado o uso indebido. Nuestro sistema cuenta con protocolos de seguridad actualizados y cifrado de datos sensibles.</p>
+            </div>
+        </div>
+
+        <div class="card policy-card">
+            <div class="card-content">
+                <h4 class="section-title">Compartir información</h4>
+                <p>No vendemos ni compartimos su información personal con terceros, salvo cuando sea necesario para cumplir con obligaciones legales o realizar entregas a través de empresas aliadas.</p>
+            </div>
+        </div>
+
+        <div class="card policy-card">
+            <div class="card-content">
+                <h4 class="section-title">Sus derechos</h4>
+                <p>Usted tiene derecho a acceder, corregir o eliminar sus datos personales en cualquier momento. También puede oponerse al tratamiento de sus datos o solicitar la limitación del mismo escribiéndonos a: <a href="mailto:privacidad@lapuntilla.com" class="contact-link">privacidad@lapuntilla.com</a></p>
+            </div>
+        </div>
+
+        <div class="card policy-card">
+            <div class="card-content">
+                <h4 class="section-title">Modificaciones</h4>
+                <p>Nos reservamos el derecho de actualizar esta política en cualquier momento. Le recomendamos revisar esta página periódicamente para mantenerse informado.</p>
+            </div>
+        </div>
+
+        <p class="center-align last-updated">Última actualización: @DateTime.Now.ToString("dd MMMM yyyy")</p>
+    </div>
+</div>

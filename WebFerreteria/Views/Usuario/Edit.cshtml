@@ -1,0 +1,70 @@
+﻿@model WebFerreteria.Models.Usuarios
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<div class="container">
+    <br />
+    <h4 class="edit-title">Editar Usuario</h4>
+    <div class="card white edit-card z-depth-2">
+        <div class="card-content">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="red-text text-darken-2"></div>
+                <input type="hidden" asp-for="Id" />
+
+                <!-- NombreCompleto -->
+                <div class="input-field">
+                    <i class="material-icons prefix">person</i>
+                    <input asp-for="NombreCompleto" id="NombreCompleto" class="validate" />
+                    <label asp-for="NombreCompleto"></label>
+                    <span asp-validation-for="NombreCompleto" class="helper-text red-text"></span>
+                </div>
+
+                <!-- Correo -->
+                <div class="input-field">
+                    <i class="material-icons prefix">email</i>
+                    <input asp-for="Correo" id="Correo" type="email" class="validate" />
+                    <label asp-for="Correo"></label>
+                    <span asp-validation-for="Correo" class="helper-text red-text"></span>
+                </div>
+
+                <!-- Contraseña -->
+                <div class="input-field">
+                    <i class="material-icons prefix">vpn_key</i>
+                    <input asp-for="Contrasena" id="Contrasena" type="password" class="validate" />
+                    <label asp-for="Contrasena"></label>
+                    <span asp-validation-for="Contrasena" class="helper-text red-text"></span>
+                </div>
+
+                <!-- Rol -->
+                <div class="input-field">
+                    <i class="material-icons prefix">assignment_ind</i>
+                    <input asp-for="Rol" id="Rol" class="validate" />
+                    <label asp-for="Rol"></label>
+                    <span asp-validation-for="Rol" class="helper-text red-text"></span>
+                </div>
+
+                <!-- Botones -->
+                <div class="row btn-group">
+                    <div class="col s12">
+                        <button type="submit" class="btn-large blue darken-2 waves-effect waves-light">
+                            <i class="material-icons left">save</i> Guardar
+                        </button>
+                        <a asp-action="Index" class="btn-large grey darken-1 waves-effect waves-light">
+                            <i class="material-icons left">arrow_back</i> Regresar
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,51 @@
+﻿@model WebFerreteria.Models.Pedidos
+
+@{
+    ViewData["Title"] = "Crear Pedido";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h4 class="create-title">Registrar Pedido</h4>
+    <div class="card white create-card z-depth-2">
+        <div class="card-content">
+            <form asp-action="Create">
+                <div asp-validation-summary="ModelOnly" class="red-text text-darken-2"></div>
+
+                <!-- Cliente -->
+                <div class="input-field">
+                    <i class="material-icons prefix">person</i>
+                    <select asp-for="ClienteId" asp-items="ViewBag.ClienteId" id="ClienteId">
+                        <option value="">Seleccione un cliente</option>
+                    </select>
+                    <label for="ClienteId">Cliente</label>
+                </div>
+
+                <!-- Estado -->
+                <div class="input-field">
+                    <i class="material-icons prefix">info</i>
+                    <input asp-for="Estado" id="Estado" class="validate" />
+                    <label asp-for="Estado"></label>
+                    <span asp-validation-for="Estado" class="helper-text red-text"></span>
+                </div>
+
+                <!-- Botones -->
+                <div class="row btn-group">
+                    <div class="col s12">
+                        <button type="submit" class="btn-large blue darken-2 waves-effect waves-light">
+                            <i class="material-icons left">save</i> Registrar
+                        </button>
+                        <a asp-action="Index" class="btn-large grey darken-1 waves-effect waves-light">
+                            <i class="material-icons left">arrow_back</i> Regresar
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+@{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,45 @@
+﻿@model WebFerreteria.Models.Productos
+
+@{
+    ViewData["Title"] = "Detalles del Producto";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <h4 class="details-title">
+        <i class="material-icons left"></i> Detalles del Producto
+    </h4>
+
+    <div class="card details-card white z-depth-2">
+        <div class="card-content">
+            <dl class="row details-list">
+                <div class="col s12 m6">
+                    <dt><i class="material-icons tiny">inventory_2</i> Nombre</dt>
+                    <dd>@Model.Nombre</dd>
+
+                    <dt><i class="material-icons tiny">description</i> Descripción</dt>
+                    <dd>@Model.Descripcion</dd>
+
+                    <dt><i class="material-icons tiny">attach_money</i> Precio</dt>
+                    <dd>$@String.Format("{0:N0}", Model.Precio)</dd>
+                </div>
+
+                <div class="col s12 m6">
+                    <dt><i class="material-icons tiny">format_list_numbered</i> Cantidad</dt>
+                    <dd>@Model.Cantidad unidades</dd>
+                </div>
+            </dl>
+        </div>
+    </div>
+
+    <div class="row btn-group">
+        <div class="col s12">
+            <a asp-action="Edit" asp-route-id="@Model?.Id" class="btn-large blue darken-2 waves-effect waves-light">
+                <i class="material-icons left">edit</i> Editar
+            </a>
+            <a asp-action="Index" class="btn-large grey darken-1 waves-effect waves-light">
+                <i class="material-icons left">arrow_back</i> Regresar
+            </a>
+        </div>
+    </div>
+</div>

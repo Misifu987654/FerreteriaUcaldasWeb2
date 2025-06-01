@@ -1,0 +1,215 @@
+﻿/* Estilos personalizados para la aplicación WebFerreteria */
+
+/* Estilo para el fondo general de la página y fuente */
+body {
+    background-color: #f5f5f5; /* Fondo gris claro para un look limpio */
+    font-family: 'Roboto', sans-serif; /* Fuente moderna y legible */
+}
+
+/* Estilo para el logotipo en la barra de navegación */
+.brand-logo {
+    font-weight: bold;
+    font-size: 1.8rem; /* Tamaño ligeramente más grande */
+    color: #ffffff !important; /* Blanco para destacar en la barra azul */
+}
+
+/* Estilo para los enlaces de la barra de navegación */
+.nav-wrapper ul li a {
+    font-size: 1.1rem;
+    transition: color 0.3s ease; /* Transición suave al pasar el ratón */
+}
+
+    .nav-wrapper ul li a:hover {
+        color: #bbdefb !important; /* Color azul claro al pasar el ratón */
+    }
+
+/* Estilo para el contenedor principal */
+.container {
+    margin-top: 20px; /* Espacio superior para separar del menú */
+}
+
+/* Estilo para el pie de página */
+.page-footer {
+    padding-top: 10px;
+    margin-top: 40px; /* Espacio superior para separar del contenido */
+    background-color: #eceff1 !important; /* Fondo gris claro */
+}
+
+    .page-footer p {
+        font-size: 0.9rem;
+        color: #546e7a; /* Gris azulado para el texto */
+    }
+
+/* Estilo para botones de Materialize */
+.btn, .btn-large, .btn-small {
+    background-color: #1976d2 !important; /* Azul principal de la ferretería */
+    transition: background-color 0.3s ease;
+}
+
+    .btn:hover, .btn-large:hover, .btn-small:hover {
+        background-color: #1565c0 !important; /* Azul más oscuro al pasar el ratón */
+    }
+
+/* Estilo responsivo para pantallas pequeñas */
+@media screen and (max-width: 600px) {
+    .brand-logo {
+        font-size: 1.4rem; /* Tamaño reducido en móviles */
+    }
+
+    .container {
+        padding: 0 10px; /* Menos espacio en los bordes */
+    }
+}
+
+/*Estilo de vistas*/
+
+/* Estilo para Detalles de Materialize*/
+
+.details-card {
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 15px; /*bordes redondeados*/
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /*sombras suaves*/
+}
+
+.details-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 30px; /*espacio inferior con el contenido*/
+}
+
+.details-list dt {
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #1976d2; /*azul titulo de datos*/
+    margin-top: 20px;
+}
+
+.details-list dd {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+.btn-group {
+    margin-top: 30px;
+}
+
+/* Estilo vista Editar de Materialize*/
+
+.edit-card {
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /*sombras marcadas*/
+}
+
+.edit-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.btn-group {
+    margin-top: 25px;
+}
+
+/* Estilo vistas para Crear de Materialize)*/
+
+.create-card {
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.create-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.btn-group {
+    margin-top: 25px;
+}
+
+/* Estilo vista Index */
+
+.usuarios-header {
+    margin-top: 30px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between; /*titulo a la izquierda, boron a la derecha*/
+    align-items: center; /*alineacion vertical y centrada*/
+}
+
+    .usuarios-header h4 {
+        margin: 0;
+        font-size: 2.2rem;
+        font-weight: bold;
+    }
+
+.usuarios-table-container {
+    margin-top: 20px;
+} 
+
+.acciones-btns a {
+    margin: 2px; /*separacion entre botones*/
+}
+
+.truncate-cell {
+    max-width: 150px; /*ancho maximo de celdas*/
+    overflow: hidden; /*ocultar contenido al sobrepase*/
+    text-overflow: ellipsis; /*puntos suspensivos cuyando hay texto largo*/
+    white-space: nowrap; /*impedir que el texto se divida en varias lineas*/
+}
+
+/* Estilo para la vista Eliminar */
+.delete-card {
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+}
+
+.delete-title {
+    font-size: 2.4rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/*Nuevas Funciones Inicio*/
+
+:root {
+    --bg-color: white;
+    --text-color: black;
+}
+
+[data-theme="dark"] {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+nav, footer {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+.sidenav {
+    background-color: var(--bg-color) !important;
+}
+
+.material-icons {
+    color: var(--text-color) !important;
+}
+
+.btn-text-white {
+    color: white !important;
+}
+

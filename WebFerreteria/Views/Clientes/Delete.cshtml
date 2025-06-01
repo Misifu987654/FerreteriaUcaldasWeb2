@@ -1,0 +1,52 @@
+﻿@model WebFerreteria.Models.Clientes
+
+@{
+    ViewData["Title"] = "Eliminar Cliente";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <br />
+    <h4 class="edit-title black-text text-darken-2">¿Estás seguro de eliminar este cliente?</h4>
+    <div class="card white z-depth-2">
+        <div class="card-content">
+            <ul class="collection with-header">
+
+                <li class="collection-header">
+                    <h5><i class="material-icons left">person</i>Nombre</h5>
+                </li>
+                <li class="collection-item">@Model.Nombre</li>
+
+                <li class="collection-header">
+                    <h5><i class="material-icons left">phone</i>Teléfono</h5>
+                </li>
+                <li class="collection-item">@Model.Telefono</li>
+
+                <li class="collection-header">
+                    <h5><i class="material-icons left">email</i>Correo</h5>
+                </li>
+                <li class="collection-item">@Model.Correo</li>
+
+                <li class="collection-header">
+                    <h5><i class="material-icons left">location_on</i>Dirección</h5>
+                </li>
+                <li class="collection-item">@Model.Direccion</li>
+
+            </ul>
+
+            <form asp-action="Delete">
+                <input type="hidden" asp-for="Id" />
+                <div class="row btn-group">
+                    <div class="col s12">
+                        <button type="submit" class="btn-large blue tooltipped">
+                            <i class="material-icons left">delete</i> Eliminar
+                        </button>
+                        <a asp-action="Index" class="btn-large grey darken-1 waves-effect waves-light">
+                            <i class="material-icons left">arrow_back</i> Cancelar
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

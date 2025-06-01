@@ -1,0 +1,63 @@
+﻿@model WebFerreteria.Models.Pedidos
+
+@{
+    ViewData["Title"] = "Editar Pedido";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <br />
+    <h4 class="edit-title">Editar Pedido</h4>
+    <div class="card white z-depth-2 edit-card">
+        <div class="card-content">
+            <form asp-action="Edit">
+                <div asp-validation-summary="ModelOnly" class="red-text text-darken-2"></div>
+                <input type="hidden" asp-for="Id" />
+
+                <!-- Cliente -->
+                <div class="input-field">
+                    <i class="material-icons prefix">person</i>
+                    <select asp-for="ClienteId" asp-items="ViewBag.ClienteId" id="ClienteId">
+                        <option value="">Seleccione un cliente</option>
+                    </select>
+                    <label asp-for="ClienteId" class="active">Cliente</label>
+                    <span asp-validation-for="ClienteId" class="helper-text red-text"></span>
+                </div>
+
+                <!-- Fecha -->
+                <div class="input-field">
+                    <i class="material-icons prefix">event</i>
+                    <input asp-for="Fecha" id="Fecha" type="date" class="validate" />
+                    <label asp-for="Fecha" class="active">Fecha</label>
+                    <span asp-validation-for="Fecha" class="helper-text red-text"></span>
+                </div>
+
+                <!-- Estado -->
+                <div class="input-field">
+                    <i class="material-icons prefix">assignment</i>
+                    <input asp-for="Estado" id="Estado" type="text" class="validate" />
+                    <label asp-for="Estado" for="Estado"></label>
+                    <span asp-validation-for="Estado" class="helper-text red-text"></span>
+                </div>
+
+                <!-- Botones -->
+                <div class="row btn-group">
+                    <div class="col s12">
+                        <button type="submit" class="btn-large blue darken-2 waves-effect waves-light">
+                            <i class="material-icons left">save</i> Guardar cambios
+                        </button>
+                        <a asp-action="Index" class="btn-large grey darken-1 waves-effect waves-light">
+                            <i class="material-icons left">arrow_back</i> Volver
+                        </a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
