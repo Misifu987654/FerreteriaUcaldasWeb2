@@ -19,10 +19,34 @@ namespace WebFerreteria.Controllers
         }
 
         // GET: Pedido
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string estado)
         {
-            var ferreteriaDbContext = _context.Pedidos.Include(p => p.Cliente).OrderBy(p => p.Cliente.Nombre);
-            return View(await ferreteriaDbContext.ToListAsync());
+            // Obtener todos los estados distintos para el dropdown
+            var estados = await _context.Pedidos
+                .Select(p => p.Estado)
+                .Distinct()
+                .ToListAsync();
+
+            ViewData["Estados"] = estados;
+            ViewData["EstadoSeleccionado"] = estado;
+
+            // Consulta base
+            var query = _context.Pedidos
+                .Include(p => p.Cliente)
+                .AsQueryable();
+
+            // Aplicar filtro si se seleccionó un estado
+            if (!string.IsNullOrEmpty(estado))
+            {
+                query = query.Where(p => p.Estado == estado);
+            }
+
+            // Ordenar y ejecutar la consulta
+            var pedidos = await query
+                .OrderBy(p => p.Cliente.Nombre)
+                .ToListAsync();
+
+            return View(pedidos);
         }
 
         // GET: Pedido/Details/5

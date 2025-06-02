@@ -140,7 +140,7 @@ body {
     margin-bottom: 25px;
     display: flex;
     justify-content: space-between; /*titulo a la izquierda, boron a la derecha*/
-    align-items: center; /*alineacion vertical y centrada*/
+    align-items: 400px; /*alineacion vertical y centrada*/
 }
 
     .usuarios-header h4 {
@@ -151,7 +151,7 @@ body {
 
 .usuarios-table-container {
     margin-top: 20px;
-} 
+}
 
 .acciones-btns a {
     margin: 2px; /*separacion entre botones*/
@@ -178,38 +178,20 @@ body {
     font-weight: bold;
     margin-bottom: 30px;
 }
+/*boton filtrar - vista producto*/
 
-/*Nuevas Funciones Inicio*/
-
-:root {
-    --bg-color: white;
-    --text-color: black;
+.filter-form {
+    max-width: 300px;
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
 }
 
-[data-theme="dark"] {
-    --bg-color: #121212;
-    --text-color: #f0f0f0;
+.filter-select {
+    margin-right: 10px;
+    flex-grow: 1;
 }
 
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
+.filter-button {
+    margin-top: 0;
 }
-
-nav, footer {
-    background-color: var(--bg-color) !important;
-    color: var(--text-color) !important;
-}
-
-.sidenav {
-    background-color: var(--bg-color) !important;
-}
-
-.material-icons {
-    color: var(--text-color) !important;
-}
-
-.btn-text-white {
-    color: white !important;
-}
-

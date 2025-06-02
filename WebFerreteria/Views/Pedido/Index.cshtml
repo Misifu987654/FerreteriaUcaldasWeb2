@@ -3,10 +3,14 @@
 @{
     ViewData["Title"] = "Pedidos";
     Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var estados = ViewData["Estados"] as List<string> ?? new List<string>();
+    string estadoSeleccionado = ViewData["EstadoSeleccionado"] as string ?? "";
 }
 
 <div class="usuarios-header">
     <h4>Pedidos Registrados</h4>
+
     <a asp-action="Create" class="btn-large blue darken-2 waves-effect waves-light">
         <i class="material-icons left">person_add</i> Crear Pedido
     </a>
@@ -19,7 +23,7 @@
                 <tr>
                     <th>@Html.DisplayNameFor(model => model.Fecha)</th>
                     <th>@Html.DisplayNameFor(model => model.Estado)</th>
-                    <th>@Html.DisplayNameFor(model => model.Cliente)</th>
+                    <th>Cliente</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
@@ -47,3 +51,14 @@
         </table>
     </div>
 </div>
+
+<form method="get" asp-action="Index" class="input-field" style="max-width: 300px; display:inline-flex; align-items: center; margin-right:10px;">
+    <select name="estado" class="browser-default" style="margin-right: 10px; flex-grow: 1;">
+        <option value="">Todos los estados</option>
+        @foreach (var estado in estados)
+        {
+            <option value="@estado" selected="@(estado == estadoSeleccionado)">@estado</option>
+        }
+    </select>
+    <button type="submit" class="btn-small blue darken-2" style="margin-top: 0;">Filtrar</button>
+</form>

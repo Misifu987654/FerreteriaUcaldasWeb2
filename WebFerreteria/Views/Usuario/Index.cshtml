@@ -1,22 +1,21 @@
 ﻿@model IEnumerable<WebFerreteria.Models.Usuarios>
 
 @{
-    ViewData["Title"] = "Usuarios"; // titulo vista
-    Layout = "~/Views/Shared/_Layout.cshtml"; // diseño del layout
+    ViewData["Title"] = "Usuarios";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-
-<div class="usuarios-header"> @* contenedor titulo y boton crear usuario*@
+<div class="usuarios-header">
     <h4>Usuarios Registrados</h4>
-    <a asp-action="Create" class="btn-large blue darken-2 waves-effect waves-light"> @*boron accion crear*@
-        <i class="material-icons left">person_add</i> Crear Usuario @*icono de materialize*@
+    <a asp-action="Create" class="btn-large blue darken-2 waves-effect waves-light">
+        <i class="material-icons left">person_add</i> Crear Usuario
     </a>
 </div>
 
-<div class="card usuarios-table-container"> @*contenedor tipo tarjeta tabla usuarios*@
+<div class="card usuarios-table-container">
     <div class="card-content">
-        <table class="highlight responsive-table centered striped"> @*tabla responsiva con estilos de materialize*@
-            <thead class="blue-grey lighten-4"> @*encabezado de tabla con nombres de columnas*@
+        <table class="highlight responsive-table centered striped">
+            <thead class="blue-grey lighten-4">
                 <tr>
                     <th>@Html.DisplayNameFor(model => model.NombreCompleto)</th>
                     <th>@Html.DisplayNameFor(model => model.Correo)</th>
@@ -26,16 +25,16 @@
                     <th>Acciones</th>
                 </tr>
             </thead>
-            <tbody> @*cuerpo de la tabla dinamico*@
+            <tbody>
                 @foreach (var item in Model)
                 {
-                    <tr>@*celdas datos modelo*@
+                    <tr>
                         <td class="truncate-cell">@Html.DisplayFor(modelItem => item.NombreCompleto)</td>
                         <td class="truncate-cell">@Html.DisplayFor(modelItem => item.Correo)</td>
                         <td class="truncate-cell">@Html.DisplayFor(modelItem => item.Contrasena)</td>
                         <td>@Html.DisplayFor(modelItem => item.Rol)</td>
                         <td>@Html.DisplayFor(modelItem => item.Estado)</td>
-                        <td class="acciones-btns"> @*celdas de botones CRUD*@
+                        <td class="acciones-btns">
                             <a asp-action="Edit" asp-route-id="@item.Id" class="btn-small blue tooltipped" data-position="top" data-tooltip="Editar">
                                 <i class="material-icons">edit</i>
                             </a>

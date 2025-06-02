@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|c:\\users\\koko7\\onedrive\\escritorio\\proyectoferreterialapuntilla\\webferreteria\\webferreteria\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|solutionrelative:webferreteria\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|c:\\users\\koko7\\onedrive\\escritorio\\proyectoferreterialapuntilla\\webferreteria\\webferreteria\\controllers\\facturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|solutionrelative:webferreteria\\controllers\\facturacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|c:\\users\\koko7\\onedrive\\escritorio\\proyectoferreterialapuntilla\\webferreteria\\webferreteria\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|solutionrelative:webferreteria\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|c:\\users\\koko7\\onedrive\\escritorio\\proyectoferreterialapuntilla\\webferreteria\\webferreteria\\models\\facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|solutionrelative:webferreteria\\models\\facturas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|c:\\users\\koko7\\onedrive\\escritorio\\proyectoferreterialapuntilla\\webferreteria\\webferreteria\\wwwroot\\css\\theme_style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|solutionrelative:webferreteria\\wwwroot\\css\\theme_style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|c:\\users\\koko7\\onedrive\\escritorio\\proyectoferreterialapuntilla\\webferreteria\\webferreteria\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|solutionrelative:webferreteria\\views\\clientes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|c:\\users\\koko7\\onedrive\\escritorio\\proyectoferreterialapuntilla\\webferreteria\\webferreteria\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|solutionrelative:webferreteria\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|c:\\users\\koko7\\onedrive\\escritorio\\proyectoferreterialapuntilla\\webferreteria\\webferreteria\\views\\factura\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3436E54F-1AA7-4390-B79F-9CC195D1C46A}|WebFerreteria\\WebFerreteria.csproj|solutionrelative:webferreteria\\views\\factura\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,64 +54,42 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Views\\Clientes\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebFerreteria\\Views\\Clientes\\Index.cshtml",
-              "ToolTip": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Views\\Clientes\\Index.cshtml",
-              "RelativeToolTip": "WebFerreteria\\Views\\Clientes\\Index.cshtml",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAACMAAABpAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T19:40:40.933Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "theme_style.css",
-              "DocumentMoniker": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\wwwroot\\css\\theme_style.css",
-              "RelativeDocumentMoniker": "WebFerreteria\\wwwroot\\css\\theme_style.css",
-              "ToolTip": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\wwwroot\\css\\theme_style.css",
-              "RelativeToolTip": "WebFerreteria\\wwwroot\\css\\theme_style.css",
-              "ViewState": "AgIAALUAAAAAAAAAAAAqwMEAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-05-28T19:34:02.635Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "WebFerreteria\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "WebFerreteria\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T17:18:29.413Z",
+              "DocumentIndex": 1,
+              "Title": "Facturas.cs",
+              "DocumentMoniker": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Models\\Facturas.cs",
+              "RelativeDocumentMoniker": "WebFerreteria\\Models\\Facturas.cs",
+              "ToolTip": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Models\\Facturas.cs",
+              "RelativeToolTip": "WebFerreteria\\Models\\Facturas.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T15:17:36.349Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "WebFerreteria\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "WebFerreteria\\Views\\Home\\Index.cshtml",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAD8AAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T14:13:07.718Z"
+              "DocumentIndex": 0,
+              "Title": "FacturaController.cs",
+              "DocumentMoniker": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Controllers\\FacturaController.cs",
+              "RelativeDocumentMoniker": "WebFerreteria\\Controllers\\FacturaController.cs",
+              "ToolTip": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Controllers\\FacturaController.cs",
+              "RelativeToolTip": "WebFerreteria\\Controllers\\FacturaController.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAwwEkAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-02T15:17:52.897Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Privacy.cshtml",
-              "DocumentMoniker": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Views\\Home\\Privacy.cshtml",
-              "RelativeDocumentMoniker": "WebFerreteria\\Views\\Home\\Privacy.cshtml",
-              "ToolTip": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Views\\Home\\Privacy.cshtml",
-              "RelativeToolTip": "WebFerreteria\\Views\\Home\\Privacy.cshtml",
-              "ViewState": "AgIAADMAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Views\\Factura\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebFerreteria\\Views\\Factura\\Index.cshtml",
+              "ToolTip": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\Views\\Factura\\Index.cshtml",
+              "RelativeToolTip": "WebFerreteria\\Views\\Factura\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T14:13:06.59Z"
+              "WhenOpened": "2025-06-02T15:17:45.911Z",
+              "EditorCaption": ""
             }
           ]
         },

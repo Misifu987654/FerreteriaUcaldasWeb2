@@ -19,9 +19,37 @@ namespace WebFerreteria.Controllers
         }
 
         // GET: Clientes
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString, string sortOrder)
         {
-            return View(await _context.Clientes.ToListAsync());
+            // Guardar el término de búsqueda para mantenerlo en la vista
+            ViewData["CurrentFilter"] = searchString;
+            ViewData["CurrentSort"] = sortOrder;
+
+            // Consulta LINQ: obtener todos los clientes
+            var clientes = from c in _context.Clientes
+                           select c;
+
+            // Filtrar por término de búsqueda
+            if (!string.IsNullOrEmpty(searchString))
+            {
+                clientes = clientes.Where(c => c.Nombre.Contains(searchString) ||
+                                              c.Correo.Contains(searchString) ||
+                                              c.Telefono.Contains(searchString));
+            }
+
+            // Ordenamiento
+            switch (sortOrder)
+            {
+                case "nombre_desc":
+                    clientes = clientes.OrderByDescending(c => c.Nombre);
+                    break;
+                default:
+                    clientes = clientes.OrderBy(c => c.Nombre); // Ordenar ascendentemente
+                    break;
+            }
+
+            // Ejecutar la consulta y devolver la vista
+            return View(await clientes.ToListAsync());
         }
 
         // GET: Clientes/Details/5
@@ -49,8 +77,6 @@ namespace WebFerreteria.Controllers
         }
 
         // POST: Clientes/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,Nombre,Telefono,Correo,Direccion")] Clientes clientes)
@@ -81,8 +107,6 @@ namespace WebFerreteria.Controllers
         }
 
         // POST: Clientes/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Telefono,Correo,Direccion")] Clientes clientes)

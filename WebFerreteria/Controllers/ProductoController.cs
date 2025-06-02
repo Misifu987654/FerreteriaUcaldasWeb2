@@ -21,25 +21,22 @@ namespace WebFerreteria.Controllers
         // GET: Producto
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Productos.ToListAsync());
+            var productos = await _context.Productos
+                .OrderBy(p => p.Nombre)
+                .ToListAsync();
+
+            return View(productos);
         }
 
         // GET: Producto/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
 
-            var productos = await _context.Productos
+            var producto = await _context.Productos
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (productos == null)
-            {
-                return NotFound();
-            }
 
-            return View(productos);
+            return producto == null ? NotFound() : View(producto);
         }
 
         // GET: Producto/Create
@@ -49,88 +46,70 @@ namespace WebFerreteria.Controllers
         }
 
         // POST: Producto/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Descripcion,Precio,Cantidad")] Productos productos)
+        public async Task<IActionResult> Create([Bind("Id,Nombre,Descripcion,Precio,Cantidad")] Productos producto)
         {
+            // Validaciones adicionales
+            if (producto.Precio <= 0)
+                ModelState.AddModelError("Precio", "El precio debe ser mayor que cero");
+
+            if (producto.Cantidad < 0)
+                ModelState.AddModelError("Cantidad", "La cantidad no puede ser negativa");
+
             if (ModelState.IsValid)
             {
-                _context.Add(productos);
+                _context.Add(producto);
                 await _context.SaveChangesAsync();
+                TempData["SuccessMessage"] = "Producto creado correctamente";
                 return RedirectToAction(nameof(Index));
             }
-            return View(productos);
+            return View(producto);
         }
 
         // GET: Producto/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
 
-            var productos = await _context.Productos.FindAsync(id);
-            if (productos == null)
-            {
-                return NotFound();
-            }
-            return View(productos);
+            var producto = await _context.Productos.FindAsync(id);
+            return producto == null ? NotFound() : View(producto);
         }
 
         // POST: Producto/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Descripcion,Precio,Cantidad")] Productos productos)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Descripcion,Precio,Cantidad")] Productos producto)
         {
-            if (id != productos.Id)
-            {
-                return NotFound();
-            }
+            if (id != producto.Id) return NotFound();
 
             if (ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(productos);
+                    _context.Update(producto);
                     await _context.SaveChangesAsync();
+                    TempData["SuccessMessage"] = "Producto actualizado correctamente";
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ProductosExists(productos.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
+                    if (!ProductoExists(producto.Id)) return NotFound();
+                    else throw;
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(productos);
+            return View(producto);
         }
 
         // GET: Producto/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            if (id == null) return NotFound();
 
-            var productos = await _context.Productos
+            var producto = await _context.Productos
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (productos == null)
-            {
-                return NotFound();
-            }
 
-            return View(productos);
+            return producto == null ? NotFound() : View(producto);
         }
 
         // POST: Producto/Delete/5
@@ -138,17 +117,64 @@ namespace WebFerreteria.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var productos = await _context.Productos.FindAsync(id);
-            if (productos != null)
+            var producto = await _context.Productos.FindAsync(id);
+            if (producto != null)
             {
-                _context.Productos.Remove(productos);
+                try
+                {
+                    _context.Productos.Remove(producto);
+                    await _context.SaveChangesAsync();
+                    TempData["SuccessMessage"] = "Producto eliminado correctamente";
+                }
+                catch (DbUpdateException)
+                {
+                    TempData["ErrorMessage"] = "No se pudo eliminar el producto. Posiblemente esté siendo usado en ventas.";
+                }
             }
-
-            await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ProductosExists(int id)
+        // Método para vender producto
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> VenderProducto(int id, int cantidad)
+        {
+            var producto = await _context.Productos.FindAsync(id);
+            if (producto == null)
+            {
+                TempData["ErrorMessage"] = "Producto no encontrado";
+                return RedirectToAction(nameof(Index));
+            }
+
+            if (cantidad <= 0)
+            {
+                TempData["ErrorMessage"] = "La cantidad debe ser mayor que cero";
+                return RedirectToAction("Details", new { id });
+            }
+
+            if (producto.Cantidad < cantidad)
+            {
+                TempData["ErrorMessage"] = $"Stock insuficiente. Solo quedan {producto.Cantidad} unidades";
+                return RedirectToAction("Details", new { id });
+            }
+
+            producto.Cantidad -= cantidad;
+            _context.Update(producto);
+
+            try
+            {
+                await _context.SaveChangesAsync();
+                TempData["SuccessMessage"] = $"Venta registrada. Stock actual: {producto.Cantidad}";
+            }
+            catch (DbUpdateException ex)
+            {
+                TempData["ErrorMessage"] = "Error al registrar la venta: " + ex.Message;
+            }
+
+            return RedirectToAction("Details", new { id });
+        }
+
+        private bool ProductoExists(int id)
         {
             return _context.Productos.Any(e => e.Id == id);
         }

@@ -12,6 +12,23 @@
     </a>
 </div>
 
+<!-- Mensajes de estado -->
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="card-panel green lighten-2 white-text">
+        <i class="material-icons left">check</i>
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="card-panel red lighten-2 white-text">
+        <i class="material-icons left">error</i>
+        @TempData["ErrorMessage"]
+    </div>
+}
+
 <div class="card usuarios-table-container">
     <div class="card-content">
         <table class="highlight responsive-table centered striped">
@@ -21,17 +38,32 @@
                     <th>@Html.DisplayNameFor(model => model.Descripcion)</th>
                     <th>@Html.DisplayNameFor(model => model.Precio)</th>
                     <th>@Html.DisplayNameFor(model => model.Cantidad)</th>
+                    <th>Estado</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var item in Model)
                 {
-                    <tr>
+                    <tr class="@(item.Cantidad <= 0 ? "grey lighten-2" : item.Cantidad < 5 ? "yellow lighten-4" : "")">
                         <td class="truncate-cell">@Html.DisplayFor(modelItem => item.Nombre)</td>
                         <td class="truncate-cell">@Html.DisplayFor(modelItem => item.Descripcion)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Precio)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Cantidad)</td>
+                        <td>@item.Precio</td>
+                        <td>@item.Cantidad</td>
+                        <td>
+                            @if (item.Cantidad <= 0)
+                            {
+                                <span class="red-text text-darken-2"><strong>AGOTADO</strong></span>
+                            }
+                            else if (item.Cantidad < 5)
+                            {
+                                <span class="orange-text text-darken-2"><strong>STOCK BAJO</strong></span>
+                            }
+                            else
+                            {
+                                <span class="green-text text-darken-2"><strong>DISPONIBLE</strong></span>
+                            }
+                        </td>
                         <td class="acciones-btns">
                             <a asp-action="Edit" asp-route-id="@item.Id" class="btn-small blue tooltipped" data-position="top" data-tooltip="Editar">
                                 <i class="material-icons">edit</i>
@@ -42,6 +74,31 @@
                             <a asp-action="Delete" asp-route-id="@item.Id" class="btn-small red tooltipped" data-position="top" data-tooltip="Eliminar" onclick="return confirm('¿Estás seguro de eliminar este producto?');">
                                 <i class="material-icons">delete</i>
                             </a>
+                            @if (item.Cantidad > 0)
+                            {
+                                <button class="btn-small purple tooltipped modal-trigger" data-target="modalVenta-@item.Id" data-position="top" data-tooltip="Vender">
+                                    <i class="material-icons">shopping_cart</i>
+                                </button>
+
+                                <!-- Modal para venta -->
+                                <div id="modalVenta-@item.Id" class="modal">
+                                    <div class="modal-content">
+                                        <h5>Vender @item.Nombre</h5>
+                                        <p>Stock actual: @item.Cantidad</p>
+                                        <form asp-action="VenderProducto" method="post">
+                                            <input type="hidden" name="id" value="@item.Id" />
+                                            <div class="input-field">
+                                                <input type="number" name="cantidad" min="1" max="@item.Cantidad" required />
+                                                <label>Cantidad a vender</label>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn purple waves-effect">Confirmar Venta</button>
+                                                <a href="#!" class="modal-close btn grey waves-effect">Cancelar</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            }
                         </td>
                     </tr>
                 }
@@ -49,3 +106,13 @@
         </table>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+        // Inicializar modales y tooltips
+        document.addEventListener('DOMContentLoaded', function() {
+            var modals = M.Modal.init(document.querySelectorAll('.modal'));
+            var tooltips = M.Tooltip.init(document.querySelectorAll('.tooltipped'));
+        });
+    </script>
+}

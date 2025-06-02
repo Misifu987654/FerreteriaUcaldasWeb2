@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hABGCVgkk8D5lY28F6aXdn1Jhhnn/+sO1Vzwc3lTEtU=",
+  "Hash": "YOxF+qW3ZYXXmvyWNDP6Q1SyGK5TMimk9OPztpWraaw=",
   "Source": "WebFerreteria",
   "BasePath": "_content/WebFerreteria",
   "Mode": "Default",
@@ -94,8 +94,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "6al64t9gzm",
-      "Integrity": "Plmm9D3K9sFFIb6efaYJ0uIbu3gF1W8ZNdDPX1yD8b0=",
+      "Fingerprint": "nm7wdck8pp",
+      "Integrity": "nwugGc5jDA8a3dbXjejnrXJ5VWzcoE/nHAOzca123N8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\theme_style.css"
@@ -1634,51 +1634,6 @@
       ]
     },
     {
-      "Route": "css/theme_style.6al64t9gzm.css",
-      "AssetFile": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\wwwroot\\css\\theme_style.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "4925"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Plmm9D3K9sFFIb6efaYJ0uIbu3gF1W8ZNdDPX1yD8b0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Wed, 28 May 2025 19:53:35 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "6al64t9gzm"
-        },
-        {
-          "Name": "label",
-          "Value": "css/theme_style.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Plmm9D3K9sFFIb6efaYJ0uIbu3gF1W8ZNdDPX1yD8b0="
-        }
-      ]
-    },
-    {
       "Route": "css/theme_style.css",
       "AssetFile": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\wwwroot\\css\\theme_style.css",
       "Selectors": [],
@@ -1689,7 +1644,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "4925"
+          "Value": "4625"
         },
         {
           "Name": "Content-Type",
@@ -1697,11 +1652,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Plmm9D3K9sFFIb6efaYJ0uIbu3gF1W8ZNdDPX1yD8b0=\""
+          "Value": "\"nwugGc5jDA8a3dbXjejnrXJ5VWzcoE/nHAOzca123N8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Wed, 28 May 2025 19:53:35 GMT"
+          "Value": "Mon, 02 Jun 2025 13:11:34 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1711,7 +1666,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Plmm9D3K9sFFIb6efaYJ0uIbu3gF1W8ZNdDPX1yD8b0="
+          "Value": "sha256-nwugGc5jDA8a3dbXjejnrXJ5VWzcoE/nHAOzca123N8="
+        }
+      ]
+    },
+    {
+      "Route": "css/theme_style.nm7wdck8pp.css",
+      "AssetFile": "C:\\Users\\koko7\\OneDrive\\Escritorio\\ProyectoFerreteriaLaPuntilla\\WebFerreteria\\WebFerreteria\\wwwroot\\css\\theme_style.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "4625"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"nwugGc5jDA8a3dbXjejnrXJ5VWzcoE/nHAOzca123N8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 02 Jun 2025 13:11:34 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nm7wdck8pp"
+        },
+        {
+          "Name": "label",
+          "Value": "css/theme_style.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-nwugGc5jDA8a3dbXjejnrXJ5VWzcoE/nHAOzca123N8="
         }
       ]
     },

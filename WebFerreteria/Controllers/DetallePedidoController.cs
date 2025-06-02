@@ -21,28 +21,28 @@ namespace WebFerreteria.Controllers
         // GET: DetallePedido
         public async Task<IActionResult> Index()
         {
-            var ferreteriaDbContext = _context.DetallePedido.Include(d => d.Pedido).Include(d => d.Producto).OrderBy(d => d.Producto.Nombre);
-            return View(await ferreteriaDbContext.ToListAsync());
-        }
+            // Consulta LINQ: resumen de ventas por producto
+            var resumenVentas = await _context.DetallePedido
+                .Include(d => d.Producto)
+                .GroupBy(d => new { d.ProductoId, d.Producto.Nombre })
+                .Select(g => new
+                {
+                    Producto = g.Key.Nombre,
+                    TotalCantidad = g.Sum(x => x.Cantidad),
+                    TotalVentas = g.Sum(x => x.Cantidad * x.PrecioUnitario)
+                })
+                .OrderByDescending(x => x.TotalCantidad)
+                .ToListAsync();
 
-        // GET: DetallePedido/Details/5
-        public async Task<IActionResult> Details(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
+            ViewBag.ResumenVentas = resumenVentas;
 
-            var detallePedido = await _context.DetallePedido
+            // Retorna los datos originales para el index
+            var ferreteriaDbContext = _context.DetallePedido
                 .Include(d => d.Pedido)
                 .Include(d => d.Producto)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (detallePedido == null)
-            {
-                return NotFound();
-            }
+                .OrderBy(d => d.Producto.Nombre);
 
-            return View(detallePedido);
+            return View(await ferreteriaDbContext.ToListAsync());
         }
 
         // GET: DetallePedido/Create

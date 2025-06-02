@@ -12,6 +12,36 @@
     </a>
 </div>
 
+<!-- Resumen de Ventas por Producto -->
+@if (ViewBag.ResumenVentas != null)
+{
+    <div class="card resumen-ventas-container">
+        <div class="card-content">
+            <h5 class="blue-text text-darken-2">Resumen de Ventas por Producto</h5>
+            <table class="highlight responsive-table centered striped">
+                <thead class="grey lighten-3">
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad Vendida</th>
+                        <th>Total en Ventas</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in ViewBag.ResumenVentas)
+                    {
+                        <tr>
+                            <td>@item.Producto</td>
+                            <td>@item.TotalCantidad</td>
+                            <td>$@string.Format("{0:N0}", item.TotalVentas)</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+
+<!-- Tabla de Detalles de Pedido -->
 <div class="card usuarios-table-container">
     <div class="card-content">
         <table class="highlight responsive-table centered striped">

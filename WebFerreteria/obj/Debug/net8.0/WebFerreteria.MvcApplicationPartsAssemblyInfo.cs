@@ -11,13 +11,7 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("WebFerreteria")]
-[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
-[assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c4087087f92e58e44ac8caa3f5b35a9dfef2525")]
-[assembly: System.Reflection.AssemblyProductAttribute("WebFerreteria")]
-[assembly: System.Reflection.AssemblyTitleAttribute("WebFerreteria")]
-[assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
+[assembly: Microsoft.AspNetCore.Mvc.ApplicationParts.ApplicationPartAttribute("X.PagedList.Mvc.Core")]
 
 // Generado por la clase WriteCodeFragment de MSBuild.
 

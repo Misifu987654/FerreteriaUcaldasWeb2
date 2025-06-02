@@ -574,3 +574,7 @@ C:\Users\koko7\OneDrive\Escritorio\ProyectoFerreteriaLaPuntilla\WebFerreteria\We
 C:\Users\koko7\OneDrive\Escritorio\ProyectoFerreteriaLaPuntilla\WebFerreteria\WebFerreteria\obj\Debug\net8.0\WebFerreteria.pdb
 C:\Users\koko7\OneDrive\Escritorio\ProyectoFerreteriaLaPuntilla\WebFerreteria\WebFerreteria\obj\Debug\net8.0\WebFerreteria.genruntimeconfig.cache
 C:\Users\koko7\OneDrive\Escritorio\ProyectoFerreteriaLaPuntilla\WebFerreteria\WebFerreteria\obj\Debug\net8.0\ref\WebFerreteria.dll
+C:\Users\koko7\OneDrive\Escritorio\ProyectoFerreteriaLaPuntilla\WebFerreteria\WebFerreteria\obj\Debug\net8.0\WebFerreteria.sourcelink.json
+C:\Users\koko7\OneDrive\Escritorio\ProyectoFerreteriaLaPuntilla\WebFerreteria\WebFerreteria\obj\Debug\net8.0\WebFerreteria.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\koko7\OneDrive\Escritorio\ProyectoFerreteriaLaPuntilla\WebFerreteria\WebFerreteria\bin\Debug\net8.0\X.PagedList.dll
+C:\Users\koko7\OneDrive\Escritorio\ProyectoFerreteriaLaPuntilla\WebFerreteria\WebFerreteria\bin\Debug\net8.0\X.PagedList.Mvc.Core.dll
